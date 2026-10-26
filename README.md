@@ -1,5 +1,12 @@
 <h1><img width="64px" src="ai_diffusion/icons/logo-128.png"> Generative AI <i>for Krita 5</i></h1>
 
+> [!WARNING]
+> **This project has moved to [SHoogstad/diffusion-for-krita](https://github.com/SHoogstad/diffusion-for-krita).**
+> It continues there as **Diffusion for Krita**: one download for Krita 5.3 and Krita 6, with Runpod GPU
+> support and new models. This repository is no longer updated.
+> Get the latest version from the [new releases page](https://github.com/SHoogstad/diffusion-for-krita/releases)
+> and report problems [there](https://github.com/SHoogstad/diffusion-for-krita/issues).
+
 > [!IMPORTANT]
 > **This is an unofficial port** of [**Acly/krita-ai-diffusion**](https://github.com/Acly/krita-ai-diffusion)
 > back to **Krita 5.x (PyQt5)**, with a few additions of my own.
