@@ -1,11 +1,14 @@
 <h1><img width="64px" src="ai_diffusion/icons/logo-128.png"> Generative AI <i>for Krita 5</i></h1>
 
 > [!WARNING]
-> **This project has moved to [SHoogstad/diffusion-for-krita](https://github.com/SHoogstad/diffusion-for-krita).**
-> It continues there as **Diffusion for Krita**: one download for Krita 5.3 and Krita 6, with Runpod GPU
-> support and new models. This repository is no longer updated.
-> Get the latest version from the [new releases page](https://github.com/SHoogstad/diffusion-for-krita/releases)
-> and report problems [there](https://github.com/SHoogstad/diffusion-for-krita/issues).
+> **This Krita 5 (Qt5) port is in maintenance mode and no longer actively developed.**
+> It continues as **[Diffusion for Krita](https://github.com/SHoogstad/diffusion-for-krita)**: one download for
+> Krita 5.3 and Krita 6, with Runpod GPU support and new models. Please switch to it via the
+> [new releases page](https://github.com/SHoogstad/diffusion-for-krita/releases) and report problems
+> [there](https://github.com/SHoogstad/diffusion-for-krita/issues).
+>
+> This repository won't get new features. It may still get the occasional minor fix
+> (for example a ComfyUI update for the local server), with no promises on timing.
 
 > [!IMPORTANT]
 > **This is an unofficial port** of [**Acly/krita-ai-diffusion**](https://github.com/Acly/krita-ai-diffusion)

@@ -1212,8 +1212,18 @@ class SettingsDialog(QDialog):
         self._restore_button = QPushButton(_("Restore Defaults"), self)
         self._restore_button.clicked.connect(self.restore_defaults)
 
-        version_label = QLabel(_("Plugin version") + f": {__release__}", self)
+        successor = (
+            "<a href='https://github.com/SHoogstad/diffusion-for-krita'>Diffusion for Krita</a>"
+        )
+        version_label = QLabel(
+            _("Plugin version")
+            + f": {__release__}<br>"
+            + _("Maintenance only. New features are in {successor}.").format(successor=successor),
+            self,
+        )
         version_label.setStyleSheet(f"font-style:italic; color: {grey};")
+        version_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        version_label.setOpenExternalLinks(True)
 
         anchor = _("Open Settings folder")
         self._open_folder_link = QLabel(f"<a href='file://{util.user_data_dir}'>{anchor}</a>", self)
