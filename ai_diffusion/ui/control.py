@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from PyQt5 import sip
 from PyQt5.QtCore import QMetaObject, Qt, pyqtSignal
 from PyQt5.QtGui import QResizeEvent
 from PyQt5.QtWidgets import (
@@ -238,6 +239,9 @@ class ControlWidget(QWidget):
         root.active_model.document.add_pose_character(self._control.layer)
 
     def _update_visibility(self):
+        # Resize events can still arrive while the widget is being torn down
+        if sip.isdeleted(self.error_text):
+            return
         is_small = self.width() < 420
         is_pose = self._control.mode is ControlMode.pose
         is_segmentation = self._control.mode is ControlMode.segmentation
@@ -392,4 +396,6 @@ class ControlListWidget(QWidget):
             widget = next(w for w in self._widgets if w._control == widget)
         self._widgets.remove(widget)
         widget.disconnect_all()
+        widget.hide()
+        self._layout.removeWidget(widget)
         widget.deleteLater()
